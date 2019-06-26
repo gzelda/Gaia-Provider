@@ -52,6 +52,7 @@ export default {
             justify-content: center;
             height:100%;
             overflow:auto;
+            background-color: rgb(20,18,19)
       }
 
 </style>

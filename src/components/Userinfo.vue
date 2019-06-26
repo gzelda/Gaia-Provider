@@ -38,7 +38,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .color1{
-  color: rgb(87,80,124);
+  color: rgb(249,246,239);
 }
 
 </style>
