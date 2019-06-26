@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard">
+  <div class="userinfo">
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-md-8 col-md-offset-2">

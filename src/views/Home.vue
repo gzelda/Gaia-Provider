@@ -2,10 +2,11 @@
   <div id="app">
     <landing v-if="! userSession.isUserSignedIn()"></landing>
     <userinfo v-if="user" :user="user"></userinfo>
+    <rawdata v-if="user" :user="user"></rawdata>
+    <!--     <diagram v-if="user" :user="user"></diagram> -->
 
     <small class="creds">
-      todo
-      Source code on <a href="https://github.com/blockstack/blockstack-todos" target="_blank">Github</a>
+      Source code on <a href="https://github.com/tyGavinZJU/Gaia-Provider" target="_blank">Github</a>
     </small>
   </div>
 </template>
@@ -14,12 +15,13 @@
 import Landing from '@/components/Landing.vue'
 import Userinfo from '@/components/Userinfo.vue'
 import Rawdata from '@/components/Rawdata.vue'
+import Diagram from '@/components/Diagram.vue'
 import { Person } from 'blockstack'
 import { userSession } from '../userSession'
 
 export default {
   name: 'Home',
-  components: { Landing, Userinfo },
+  components: { Landing, Userinfo, Rawdata, Diagram },
   created () {
     this.userSession = userSession
   },
@@ -43,3 +45,13 @@ export default {
   }
 }
 </script>
+<style scoped>
+.app {
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            height:100%;
+            overflow:auto;
+      }
+
+</style>
