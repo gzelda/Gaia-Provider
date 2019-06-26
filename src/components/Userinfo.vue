@@ -1,21 +1,19 @@
 <template>
-  <div class="userinfo">
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-md-8 col-md-offset-2">
-          <h1 class="page-header align-middle">Gaia-evm IOT System
+          <h1 class="page-header align-middle color1">Gaia-evm IOT System
             <img :src="user.avatarUrl() ? user.avatarUrl() : '/avatar-placeholder.png'" class="avatar">
-            <small><span class="sign-out">(<a href="#" @click.prevent="signOut">Sign Out</a>)</span></small>
+            <small><span class="sign-out color1">(<a href="#" @click.prevent="signOut" class="color1">Sign Out</a>)</span></small>
           </h1>
           <h2 class="user-info">
-            <small class="float-right">
+            <small class="float-right color1">
             {{ user.username ? user.username : user.identityAddress }}
             </small>
           </h2>
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -39,5 +37,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+.color1{
+  color: rgb(87,80,124);
+}
 
 </style>

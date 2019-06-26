@@ -3,7 +3,7 @@
     <landing v-if="! userSession.isUserSignedIn()"></landing>
     <userinfo v-if="user" :user="user"></userinfo>
     <rawdata v-if="user" :user="user"></rawdata>
-    <diagram v-if="user" :user="user"></diagram>
+    <!-- <diagram v-if="user" :user="user"></diagram> -->
 
     <small class="creds">
       Source code on <a href="https://github.com/tyGavinZJU/Gaia-Provider" target="_blank">Github</a>
