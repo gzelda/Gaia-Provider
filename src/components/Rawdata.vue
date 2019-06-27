@@ -26,6 +26,10 @@
 </template>
 
 <script>
+
+import { userSession } from '../userSession'
+var STORAGE_FILE = 'sd.json'
+
 var crypto = require('crypto');
 var senRawData = require('./SensorData.json')
 var senData = senRawData.data
@@ -45,6 +49,9 @@ export default {
     }
   },
   methods: {
+    sensorOutput(){
+      userSession.putFile(STORAGE_FILE, JSON.stringify(this.data))
+    },
     sensorInput(){
       console.log(this.count)
       var t = senData[this.count].sensorSteam
@@ -207,16 +214,28 @@ export default {
 
 
     
-    }
-    ,
+    },
+    fetchData () {
+      userSession.getFile(STORAGE_FILE) // decryption is enabled by default
+        .then((text) => {
+            console.log("rawdata:",text);
+            var md5 = crypto.createHash('md5');
+            var result = md5.update(text);
+
+            var t = result.digest("hex");
+            console.log("crptoData",t);
+          })
+    },
     ssync(){
       this.timer = setInterval(this.sensorInput, 1000);
       this.timer2 = setInterval(this.fingerprint , 30000);
+      this.time3 = setInterval(this.sensorOutput , 10000);
     }
 
   },
   mounted(){
     this.ssync()
+    this.fetchData()
   }
 }
 </script>
