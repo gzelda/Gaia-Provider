@@ -1,6 +1,13 @@
 # Gaia-Provider(web3) 
 
-> A simple Vue.js project using Gaia&web3 built for the decentralized web.
+> A simple Vue.js project using Gaia&web3 provider built for the decentralized web.
+
+<img src="public/1.png">
+<img src="public/2.png">
+<img src="public/3.png">
+<img src="public/4.png">
+<img src="public/5.png">
+<img src="public/6.png">
 
 ## Build Setup
 ``` bash
