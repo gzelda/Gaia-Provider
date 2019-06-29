@@ -227,8 +227,8 @@ export default {
           })
     },
     ssync(){
-      this.timer = setInterval(this.sensorInput, 1000);
-      this.timer2 = setInterval(this.fingerprint , 30000);
+      this.timer = setInterval(this.sensorInput, 100);
+      this.timer2 = setInterval(this.fingerprint , 15000);
       this.time3 = setInterval(this.sensorOutput , 10000);
     }
 
@@ -281,7 +281,7 @@ export default {
     overflow-y:scroll;
     background-color: rgb(249,246,239);
     caret-color: white;
-    text-shadow: 0px 0px 0px rgb(253,97,87) ;
+    text-shadow: 0px 0px 0px rgb(152,65,36);
     -webkit-text-fill-color: transparent;
     font-size: 14px;
     font-weight: 500;
